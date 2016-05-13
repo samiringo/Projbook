@@ -88,7 +88,7 @@
                         <h1>Jump start</h1>
                     </div>
                     
-                    <div id="Pagejumpstartmd-set-up" disqus="true">
+                    <div id="Pagejumpstartmd-set-up" data-disqus-identifier="Projbook-Pagejumpstartmd-Pagejumpstartmd-set-up">
                         <h2>Set up</h2>
 <ol>
 <li>Create a documentation project</li>
@@ -124,7 +124,7 @@
 </ol>
 
                     </div>
-                    <div id="Pagejumpstartmd-extract-csharp-file-content" disqus="true">
+                    <div id="Pagejumpstartmd-extract-csharp-file-content" data-disqus-identifier="Projbook-Pagejumpstartmd-Pagejumpstartmd-extract-csharp-file-content">
                         <h2>Extract csharp file content</h2>
 <p>For the following examples we're going to use the following file as snippet source:</p>
 <pre><code class="language-csharp">using System;
@@ -152,7 +152,7 @@ namespace Projbook.Documentation.Code
 Extraction rule syntax include the target file, the member to extract and the extraction options.</p>
 
                     </div>
-                    <div id="Pagejumpstartmd-file-selector" disqus="true">
+                    <div id="Pagejumpstartmd-file-selector" data-disqus-identifier="Projbook-Pagejumpstartmd-Pagejumpstartmd-file-selector">
                         <h3>File selector</h3>
 <p>While using code block it's possible to reference a csharp file using <code>csharp[Path/To/The/File.cs]</code>.</p>
 <p>If nothing else is defined, the whole file content will be extracted:</p>
@@ -202,7 +202,7 @@ namespace Projbook.Documentation.Code
 }</code></pre>
 
                     </div>
-                    <div id="Pagejumpstartmd-member-selector" disqus="true">
+                    <div id="Pagejumpstartmd-member-selector" data-disqus-identifier="Projbook-Pagejumpstartmd-Pagejumpstartmd-member-selector">
                         <h3>Member selector</h3>
 <p>The second part of the extraction rule is the member name, you can either use the raw name or the full qualified name. All of following extraction rule will extract the same content:</p>
 <ul>
@@ -215,7 +215,7 @@ namespace Projbook.Documentation.Code
 }</code></pre>
 
                     </div>
-                    <div id="Pagejumpstartmd-aggregate-members" disqus="true">
+                    <div id="Pagejumpstartmd-aggregate-members" data-disqus-identifier="Projbook-Pagejumpstartmd-Pagejumpstartmd-aggregate-members">
                         <h3>Aggregate members</h3>
 <p>Thanks to the partial member matching, in case of ambigous matching Projbook will extract all matching members and stack them up. Here <code>Method</code> having overloads, <code>csharp[Code/SampleClass.cs] Method</code> will extract all of them, note that the member name is not fully qualified but it could if needed or preferred:</p>
 <pre><code class="language-csharp">private void Method(string input)
@@ -229,12 +229,12 @@ private void Method(int input)
 }</code></pre>
 
                     </div>
-                    <div id="Pagejumpstartmd-extraction-options" disqus="true">
+                    <div id="Pagejumpstartmd-extraction-options" data-disqus-identifier="Projbook-Pagejumpstartmd-Pagejumpstartmd-extraction-options">
                         <h2>Extraction options</h2>
 <p>During the extraction process Projbook can process snippet content in extracting block structure or the code block. This is doable by adding an option prefix to the extraction rule.</p>
 
                     </div>
-                    <div id="Pagejumpstartmd-block-structure" disqus="true">
+                    <div id="Pagejumpstartmd-block-structure" data-disqus-identifier="Projbook-Pagejumpstartmd-Pagejumpstartmd-block-structure">
                         <h3>Block structure</h3>
 <p>The <code>=</code> char represents the top and the bottom of a code block. With <code>csharp[Code/SampleClass.cs] =SampleClass</code> Projbook will perform a member extraction and will replace the code content by <code>// ...</code>:</p>
 <pre><code class="language-csharp">public class SampleClass
@@ -243,13 +243,13 @@ private void Method(int input)
 }</code></pre>
 
                     </div>
-                    <div id="Pagejumpstartmd-block-content" disqus="true">
+                    <div id="Pagejumpstartmd-block-content" data-disqus-identifier="Projbook-Pagejumpstartmd-Pagejumpstartmd-block-content">
                         <h3>Block content</h3>
 <p>The <code>-</code> char represents the content of a code block. With <code>csharp[Code/SampleClass.cs] -Method(int)</code> Projbook will perform a member extraction isolating the code content:</p>
 <pre><code class="language-csharp">Console.WriteLine(42 + input);</code></pre>
 
                     </div>
-                    <div id="Pagejumpstartmd-combine-with-member-aggregation" disqus="true">
+                    <div id="Pagejumpstartmd-combine-with-member-aggregation" data-disqus-identifier="Projbook-Pagejumpstartmd-Pagejumpstartmd-combine-with-member-aggregation">
                         <h3>Combine with member aggregation</h3>
 <p>You can combine rules for extracting and processing many member with options. The rule <code>csharp[Code/SampleClass.cs] =Method</code> will find any matching member with name <code>Method</code>, stack them up and remove the code content by <code>// ...</code>:</p>
 <pre><code class="language-csharp">private void Method(string input)
@@ -263,7 +263,7 @@ private void Method(int input)
 }</code></pre>
 
                     </div>
-                    <div id="Pagejumpstartmd-extract-xml-file-content" disqus="true">
+                    <div id="Pagejumpstartmd-extract-xml-file-content" data-disqus-identifier="Projbook-Pagejumpstartmd-Pagejumpstartmd-extract-xml-file-content">
                         <h2>Extract Xml file content</h2>
 <p>It is also possible to extract xml content by using XPath as query language, for example, we can export all Import tag in the Projbook's documentation project by using <code>xml[Projbook.Documentation.csproj] //Import</code>:</p>
 <pre><code class="language-xml">&lt;Import
@@ -283,23 +283,13 @@ private void Method(int input)
 
                     </div>
                     <div id="disqus_thread"></div>
-                    <!--<script>
-                        (function() {  // DON'T EDIT BELOW THIS LINE
-                            var d = document, s = d.createElement('script');
-
-                            s.src = '//projbookcomments.disqus.com/embed.js';
-
-                            s.setAttribute('data-timestamp', +new Date());
-                            (d.head || d.body).appendChild(s);
-                        })();
-                    </script>-->
                 </section>
                 <section id="Pagetemplatemd">
                     <div class="page-header">
                         <h1>Template</h1>
                     </div>
                     
-                    <div id="Pagetemplatemd-html-and-pdf-templates" disqus="true">
+                    <div id="Pagetemplatemd-html-and-pdf-templates" data-disqus-identifier="Projbook-Pagetemplatemd-Pagetemplatemd-html-and-pdf-templates">
                         <h2>HTML and PDF templates</h2>
 <p>There are two template file that you can define in <code>projbook.json</code>:</p>
 <ul>
@@ -315,12 +305,12 @@ private void Method(int input)
 You can use html template, pdf or both but at least one must be definied.</p>
 
                     </div>
-                    <div id="Pagetemplatemd-syntax" disqus="true">
+                    <div id="Pagetemplatemd-syntax" data-disqus-identifier="Projbook-Pagetemplatemd-Pagetemplatemd-syntax">
                         <h2>Syntax</h2>
 <p>Templates use html with [Razor syntax](http://www.asp.net/web-pages/overview/getting-started/introducing-razor-syntax-(c) having relevant information about documentation as model.</p>
 
                     </div>
-                    <div id="Pagetemplatemd-model" disqus="true">
+                    <div id="Pagetemplatemd-model" data-disqus-identifier="Projbook-Pagetemplatemd-Pagetemplatemd-model">
                         <h2>Model</h2>
 <p>The model is usable using the <code>@Model</code> variable using razor and contains top level member:</p>
 <ul>
@@ -329,7 +319,7 @@ You can use html template, pdf or both but at least one must be definied.</p>
 </ul>
 
                     </div>
-                    <div id="Pagetemplatemd-pages" disqus="true">
+                    <div id="Pagetemplatemd-pages" data-disqus-identifier="Projbook-Pagetemplatemd-Pagetemplatemd-pages">
                         <h3>Pages</h3>
 <p>The <code>Page</code> class contains following members that can be used in templates</p>
 <pre><code class="language-csharp">/// &lt;summary&gt;
@@ -350,7 +340,7 @@ public string PreSectionContent { get; private set; }</code></pre>
 public Section[] Sections { get; private set; }</code></pre>
 
                     </div>
-                    <div id="Pagetemplatemd-sections" disqus="true">
+                    <div id="Pagetemplatemd-sections" data-disqus-identifier="Projbook-Pagetemplatemd-Pagetemplatemd-sections">
                         <h3>Sections</h3>
 <p>The <code>Section</code> class contains following members that can be used in templates</p>
 <pre><code class="language-csharp">/// &lt;summary&gt;
@@ -367,29 +357,19 @@ public string Title { get; private set; }</code></pre>
 public string Content { get; private set; }</code></pre>
 
                     </div>
-                    <div id="Pagetemplatemd-default-template" disqus="true">
+                    <div id="Pagetemplatemd-default-template" data-disqus-identifier="Projbook-Pagetemplatemd-Pagetemplatemd-default-template">
                         <h2>Default template</h2>
 <p>See default <a href="https://github.com/defrancea/Projbook/blob/master/src/Projbook.Example/template.html">template.html</a> and <a href="https://github.com/defrancea/Projbook/blob/master/src/Projbook.Example/template-pdf.html">template-pdf.html</a></p>
 
                     </div>
                     <div id="disqus_thread"></div>
-                    <!--<script>
-                        (function() {  // DON'T EDIT BELOW THIS LINE
-                            var d = document, s = d.createElement('script');
-
-                            s.src = '//projbookcomments.disqus.com/embed.js';
-
-                            s.setAttribute('data-timestamp', +new Date());
-                            (d.head || d.body).appendChild(s);
-                        })();
-                    </script>-->
                 </section>
                 <section id="Pagereferencemd">
                     <div class="page-header">
                         <h1>Reference</h1>
                     </div>
                     
-                    <div id="Pagereferencemd-csharp-member-matching" disqus="true">
+                    <div id="Pagereferencemd-csharp-member-matching" data-disqus-identifier="Projbook-Pagereferencemd-Pagereferencemd-csharp-member-matching">
                         <h2>CSharp member matching</h2>
 <p>Here is listed all possible member matching. All of them can use partial or fully qualified name, in case of multiple matching Projbook will aggregate all matching members. The member matching never consider memeber type and will apply on any member simply based on the name.
 The member matching follows this syntax <code>csharp[&lt;fileName&gt;] &lt;optionalOption&gt;&lt;member&gt;</code>.</p>
@@ -400,7 +380,7 @@ The member matching follows this syntax <code>csharp[&lt;fileName&gt;] &lt;optio
 </ul>
 
                     </div>
-                    <div id="Pagereferencemd-namespaces" disqus="true">
+                    <div id="Pagereferencemd-namespaces" data-disqus-identifier="Projbook-Pagereferencemd-Pagereferencemd-namespaces">
                         <h3>Namespaces</h3>
 <ul>
 <li><code>csharp[File.cs] MyNamespace</code>: Match the namespace <code>MyNameSpace</code></li>
@@ -408,7 +388,7 @@ The member matching follows this syntax <code>csharp[&lt;fileName&gt;] &lt;optio
 </ul>
 
                     </div>
-                    <div id="Pagereferencemd-classes" disqus="true">
+                    <div id="Pagereferencemd-classes" data-disqus-identifier="Projbook-Pagereferencemd-Pagereferencemd-classes">
                         <h3>Classes</h3>
 <ul>
 <li><code>csharp[File.cs] ClassName</code>: Match any class nammed <code>ClassName</code></li>
@@ -416,7 +396,7 @@ The member matching follows this syntax <code>csharp[&lt;fileName&gt;] &lt;optio
 </ul>
 
                     </div>
-                    <div id="Pagereferencemd-methods" disqus="true">
+                    <div id="Pagereferencemd-methods" data-disqus-identifier="Projbook-Pagereferencemd-Pagereferencemd-methods">
                         <h3>Methods</h3>
 <ul>
 <li><code>csharp[File.cs] ClassName.MethodName</code>: Match any method nammed <code>MethodName</code> of the class <code>ClassName</code></li>
@@ -426,7 +406,7 @@ The member matching follows this syntax <code>csharp[&lt;fileName&gt;] &lt;optio
 </ul>
 
                     </div>
-                    <div id="Pagereferencemd-properties" disqus="true">
+                    <div id="Pagereferencemd-properties" data-disqus-identifier="Projbook-Pagereferencemd-Pagereferencemd-properties">
                         <h3>Properties</h3>
 <ul>
 <li><code>csharp[File.cs] ClassName.PropertyName</code>: Match any property nammed <code>PropertyName</code> of the class <code>ClassName</code></li>
@@ -436,7 +416,7 @@ The member matching follows this syntax <code>csharp[&lt;fileName&gt;] &lt;optio
 </ul>
 
                     </div>
-                    <div id="Pagereferencemd-indexers" disqus="true">
+                    <div id="Pagereferencemd-indexers" data-disqus-identifier="Projbook-Pagereferencemd-Pagereferencemd-indexers">
                         <h3>Indexers</h3>
 <ul>
 <li><code>csharp[File.cs] ClassName.[int]</code>: Match any indexer using the type <code>int</code> of the class <code>ClassName</code></li>
@@ -444,7 +424,7 @@ The member matching follows this syntax <code>csharp[&lt;fileName&gt;] &lt;optio
 </ul>
 
                     </div>
-                    <div id="Pagereferencemd-events" disqus="true">
+                    <div id="Pagereferencemd-events" data-disqus-identifier="Projbook-Pagereferencemd-Pagereferencemd-events">
                         <h3>Events</h3>
 <ul>
 <li><code>csharp[File.cs] ClassName.EventName</code>: Match any event nammed <code>EventName</code> of the class <code>ClassName</code></li>
@@ -454,7 +434,7 @@ The member matching follows this syntax <code>csharp[&lt;fileName&gt;] &lt;optio
 </ul>
 
                     </div>
-                    <div id="Pagereferencemd-constructors" disqus="true">
+                    <div id="Pagereferencemd-constructors" data-disqus-identifier="Projbook-Pagereferencemd-Pagereferencemd-constructors">
                         <h3>Constructors</h3>
 <ul>
 <li><code>csharp[File.cs] ClassName.&lt;Constructor&gt;</code>: Match any constructor of the class <code>ClassName</code></li>
@@ -463,7 +443,7 @@ The member matching follows this syntax <code>csharp[&lt;fileName&gt;] &lt;optio
 </ul>
 
                     </div>
-                    <div id="Pagereferencemd-destructors" disqus="true">
+                    <div id="Pagereferencemd-destructors" data-disqus-identifier="Projbook-Pagereferencemd-Pagereferencemd-destructors">
                         <h3>Destructors</h3>
 <ul>
 <li><code>csharp[File.cs] ClassName.&lt;Destructor&gt;</code>: Match any destructor of the class <code>ClassName</code></li>
@@ -471,7 +451,7 @@ The member matching follows this syntax <code>csharp[&lt;fileName&gt;] &lt;optio
 </ul>
 
                     </div>
-                    <div id="Pagereferencemd-generics" disqus="true">
+                    <div id="Pagereferencemd-generics" data-disqus-identifier="Projbook-Pagereferencemd-Pagereferencemd-generics">
                         <h3>Generics</h3>
 <ul>
 <li><code>csharp[File.cs] ClassName{T}</code>: Match any class nammed <code>ClassName</code> with a type parameter <code>T</code></li>
@@ -482,7 +462,7 @@ The member matching follows this syntax <code>csharp[&lt;fileName&gt;] &lt;optio
 </ul>
 
                     </div>
-                    <div id="Pagereferencemd-options" disqus="true">
+                    <div id="Pagereferencemd-options" data-disqus-identifier="Projbook-Pagereferencemd-Pagereferencemd-options">
                         <h3>Options</h3>
 <ul>
 <li><code>=</code>: Code structure only including the member with all motifier, documentation and signature but replace the code block content by <code>// ...</code></li>
@@ -490,7 +470,7 @@ The member matching follows this syntax <code>csharp[&lt;fileName&gt;] &lt;optio
 </ul>
 
                     </div>
-                    <div id="Pagereferencemd-xml-member-matching" disqus="true">
+                    <div id="Pagereferencemd-xml-member-matching" data-disqus-identifier="Projbook-Pagereferencemd-Pagereferencemd-xml-member-matching">
                         <h2>Xml member matching</h2>
 <p>CSharp matching simply follow Projbook's syntax for member matching but use XPath as member selector.
 The member matching follows this syntax <code>csharp[&lt;fileName&gt;] &lt;xpath&gt;</code>.</p>
@@ -500,22 +480,12 @@ The member matching follows this syntax <code>csharp[&lt;fileName&gt;] &lt;xpath
 </ul>
 
                     </div>
-                    <div id="Pagereferencemd-source-example" disqus="true">
+                    <div id="Pagereferencemd-source-example" data-disqus-identifier="Projbook-Pagereferencemd-Pagereferencemd-source-example">
                         <h2>Source example</h2>
 <p>Have a look to this documentation pages as example <a href="https://github.com/defrancea/Projbook/tree/master/src/Projbook.Documentation/Page">source</a></p>
 
                     </div>
                     <div id="disqus_thread"></div>
-                    <!--<script>
-                        (function() {  // DON'T EDIT BELOW THIS LINE
-                            var d = document, s = d.createElement('script');
-
-                            s.src = '//projbookcomments.disqus.com/embed.js';
-
-                            s.setAttribute('data-timestamp', +new Date());
-                            (d.head || d.body).appendChild(s);
-                        })();
-                    </script>-->
                 </section>
             </div>
         </div>
@@ -527,8 +497,8 @@ The member matching follows this syntax <code>csharp[&lt;fileName&gt;] &lt;xpath
 
     <script>
         disqus_shortname = 'projbookcomments';
-        jQuery("div[disqus=true]").ready(function() {
-            jQuery("div[disqus=true]").inlineDisqussions();
+        jQuery("[data-disqus-identifier]").ready(function () {
+            jQuery("[data-disqus-identifier]").inlineDisqussions();
         });
     </script>
 </body>
